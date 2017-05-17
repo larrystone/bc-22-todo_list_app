@@ -24,3 +24,11 @@ let hideShow = () => {
         shownSignUpSection = !shownSignUpSection;
     }
 };
+
+let login = () => {
+    
+};
+
+let signUp = () => {
+
+};
