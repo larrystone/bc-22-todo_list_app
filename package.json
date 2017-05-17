@@ -1,0 +1,23 @@
+{
+  "name": "todo-list-app",
+  "version": "1.0.0",
+  "description": "A todo list management application in Node.js app using Express 4 and Firebase",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larrystone/bc-22-todo_list_app.git"
+  },
+  "author": "Lawal Lanre",
+  "license": "ISC",
+  "homepage": "https://github.com/larrystone/bc-22-todo_list_app#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1 ",
+    "express": "^4.14.1"
+  },
+  "engines": {
+    "node": "7.4.0"
+  }
+}
