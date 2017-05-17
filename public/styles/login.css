@@ -1,0 +1,38 @@
+body{
+    height: 100vh;
+}
+
+.form-control {
+    margin-bottom: 2em;
+    border:2px solid blue;
+}
+
+.about {
+    float: left;
+    width: 50%;
+    min-height: 80%;
+}
+
+.login_signup {
+    min-height: 80%;
+}
+
+.clear {
+    clear: both;
+}
+
+form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#signup {
+    visibility: hidden;
+}
+
+#password2 {
+    display: none;
+}
+
