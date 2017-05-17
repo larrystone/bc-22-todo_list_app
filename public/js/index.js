@@ -33,7 +33,7 @@ let hideShow = () => {
     }
 };
 
-let login = () => {
+let logIn = () => {
     let email = document.querySelector('#email').value,
         password = document.querySelector('#password1').value;
     
