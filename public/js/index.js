@@ -1,21 +1,12 @@
 'use strict';
 
 const dbRef = firebase.database().ref();
-//handles case for unauthenticated user
-firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-        const username = user.email;
-        dbRef.child(username).once('value', snap => {
-            if (snap.val() == null) {
-                let path = username + '/username'
-                dbRef.child(username).set({ username })
-            }
+    //handles case for unauthenticated user
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
             window.location.href = '/dashboard';
-        })
-    } else {
-
-    }
-});
+        }
+    });
 
 let shownSignUpSection = false;
 
@@ -46,9 +37,9 @@ let login = () => {
     let email = document.querySelector('#email').value,
         password = document.querySelector('#password1').value;
     
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
         //TODO display the error using a better UI.
-        alert('Email address already in use');
+        alert('Wrong username or password');
     });
 };
 
@@ -56,8 +47,8 @@ let signUp = () => {
     let email = document.querySelector('#email').value,
         password = document.querySelector('#password1').value;
     
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         //TODO display the error using a better UI.
-        alert('Wrong username or password');
+        alert('Email address already in use');
     });
 };
