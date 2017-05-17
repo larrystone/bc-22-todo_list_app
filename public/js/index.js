@@ -2,7 +2,7 @@
 
 const dbRef = firebase.database().ref();
     //handles case for unauthenticated user
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             window.location.href = '/dashboard';
         }
@@ -37,7 +37,7 @@ let login = () => {
     let email = document.querySelector('#email').value,
         password = document.querySelector('#password1').value;
     
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).catch((error) => {
         //TODO display the error using a better UI.
         alert('Wrong username or password');
     });
@@ -47,7 +47,7 @@ let signUp = () => {
     let email = document.querySelector('#email').value,
         password = document.querySelector('#password1').value;
     
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
         //TODO display the error using a better UI.
         alert('Email address already in use');
     });
