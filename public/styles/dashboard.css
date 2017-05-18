@@ -13,10 +13,10 @@
 
 .addlist {
   border: 2px solid blue;
-  width: 100px;
   border-radius: 10px;
   margin: 10px;
   padding: 5px;
+  width: 40%;
   background-color: #A1EDF6; 
 }
 
@@ -34,6 +34,9 @@
   width: 100px;
 }
 
+.cardtitle {
+  padding: 10px;
+}
 /*.list1 {
   
 } */

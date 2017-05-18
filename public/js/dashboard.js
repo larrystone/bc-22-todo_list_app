@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(user => {
   }
 });
 
-let data = [], listCount = 0;
+let data = [], listCount = {};
 
 let logout = () => {
   firebase.auth().signOut().then(() => { });
@@ -21,10 +21,10 @@ let load = () => {
         //alert(currentUser + "\n" +snap.val());
         if (snap.val()) {
           data = snap.val();
-          listCount = snap.val().length;
+          listCount['total'] = snap.val().length;
           loadData();
         } else {
-          listCount = 0;
+          listCount['total'] = 0;
         }
       });
     } else {
@@ -35,30 +35,57 @@ let load = () => {
 };
 
 let loadData = () => {
-  if (listCount === 0) {
-    alert('no data');
+  if (listCount['total'] === undefined || listCount['total'] === 0) {
+    let mylists = document.querySelector('.mylists');
+    mylists.innerHTML = '';
   } else {
     let mylists = document.querySelector('.mylists');
+    mylists.innerHTML = '';
+
+    for (let i = 0; i < listCount['total']; i++) {
+      listCount[`list${i}`] = data[i].length;
+      for (let k = 0; k < listCount[`list${i}`].length; k++) {
+        listCount[`list${i}card${k}`] = data[i][`$0`].length;
+
+      }
+
+    }
+
+    //TODO create/update cards based off the items in list
+    let myCards = `<div class="card card0">
+                        <h4 class="cardtitle">*title*</h4>
+                    </div>`;
 
     //create lists and append
-    let newlist = `<div class="list list${listCount}">
+    let newlist = `<div class="list list${i}">
                     <input type="text" class="title" placeholder="Enter List title">
-                    <div class="card card0">
-                        <h2 class="cardtitle">+</h2>
+                    <div class="cards">
+                      ${myCards}
                     </div>
-                    <div class="card card1">
-                        <h2 class="cardtitle">+</h2>
+                    <div class="addcard">
+                        <h4 class="cardtitle">+</h4>
                     </div>
                 </div>`;
     mylists.innerHTML = mylists.innerHTML + newlist;
+
+    // updateContent(listCount) {
+    //   //update info from `data` content
+    // }
   } 
 };
 
 let addNewList = () => {
-  listCount++;
+  listCount['total']++;
   loadData();
 };
 
 let save = () => {
+  let theLists = [];
+  for (let i = 0; i < )
+
+
+};
+
+let updateContent = () => {
 
 };
