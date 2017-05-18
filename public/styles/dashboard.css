@@ -1,0 +1,43 @@
+.main {
+  width: 50%;
+}
+
+.list {
+  border: 2px solid blue;
+  width: 90%;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  background-color: orange;
+}
+
+.addlist {
+  border: 2px solid blue;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  background-color: #A1EDF6; 
+}
+
+.card {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: gray;
+  box-shadow: 3px;
+  text-align: center;
+}
+
+.card:hover {
+  height: 100px;
+  width: 100px;
+}
+
+/*.list1 {
+  
+} */
+
+/*.list2 {
+  display: block;
+}*/

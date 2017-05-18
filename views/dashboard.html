@@ -11,13 +11,23 @@
     <script src="js/firebaseInit.js"></script>
 </head>
 
-<body>
+<body onload="load()">
     <div class="container">
         <header class="title">
             <h1>Welcome...</h1>
             <button onclick="logout()">Logout</button>
+            <button onclick="save()">Save All</button>
         </header>
-        
+        <div class="main">
+            <section class="mylists">
+            </section>
+            <div class="addlist" onclick="addNewList()">
+                <h1>Add new List</h1>
+            </div>
+            <section class="details">
+
+            </section>
+        </div>
         <footer class="copyright">
             &copy; Lawal Lanre (Larrystone) @ Andela bootcamp cycle 22...
         </footer>
