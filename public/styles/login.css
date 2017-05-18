@@ -2,9 +2,17 @@ body{
     height: 100vh;
 }
 
+.jumbotron {
+    box-shadow: 5px 5px 5px black;
+}
+
 .form-control {
     margin-bottom: 2em;
     border:2px solid blue;
+}
+
+#signupgoogle {
+    margin-top: 2em;
 }
 
 .about {
@@ -13,26 +21,29 @@ body{
     min-height: 80%;
 }
 
-.login_signup {
-    min-height: 80%;
+.letter {
+    text-align: center;
+    font-family: 'Sofia';
+    font-size: 22px;
 }
 
-.clear {
-    clear: both;
-}
-
-form {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-  text-align: center;
-}
 
 #signup {
     visibility: hidden;
+}
+
+#signupgoogle {
+
 }
 
 #password2 {
     display: none;
 }
 
+.p {
+    color: red;
+}
+
+#google {
+    width: 80%;
+}

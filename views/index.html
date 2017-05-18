@@ -3,42 +3,48 @@
 <html>
 
 <head>
-    <title>Todo List: login/Sign Up</title>
+    <title>//Todo manager - Accounts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href='styles/login.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <script src="js/firebaseInit.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <header class="title">
-            <h1>ToDo-ooooo welcomes you...</h1>
+        <header class="jumbotron text-center">
+            <h1>//TODO manager App...</h1>
+            <p>Set... Manage... Achieve...</p>
         </header>
-        <section class="main">
-            <aside class="about">
-                <h2>I can't help you achieve your tasks but I sure can help you manage 'em...</Login>
-                <h4>Please login or signup to see how I try to do that</h4>
+        <div class="container">
+        <div class="row">
+            <aside>
+                <h4 class="letter">Dear Friend, <br/>I'm sorry I can't help you achieve your tasks but I sure can help you manage 'em.<br/>I hope that counts for something...<br/>Yours sincerely,<br/>//TODO</h4>
             </aside>
-            <aside class="login_signup">
+            <aside>
                 <form>
                     <input class="form-control" type="email" name="email" placeholder="Email address" class="form-control" id="email" required>
 
                     <input class="form-control" type="password" name="password" placeholder="Enter password" id="password1" required>
                     <input class="form-control" type="password" name="password" placeholder="Re-enter Password" id="password2" required>
 
-                    <button type="button" id="login" onclick="logIn()">Login</button>
+                    <button class="btn btn-info" type="button" id="login" onclick="logIn()">Login</button>
                     <a id="account_action" onclick="hideShow()">Create account</a>
-                    <button type="button" id="signup" onclick="signUp()">Sign Up</button>
+                    <button class="btn btn-info" type="button" id="signup" onclick="signUp()">Sign Up</button>
+                    <br/>
+                    <button class="btn btn-info" type="button" id="signupgoogle" id = "google" onclick="loginGoogle()">Google Login</button>
                 </form>
             </aside>
+            
         </section>
+        </div>
         <div class="clear"></div>
-        <footer class="copyright">
-            &copy; Lawal Lanre (Larrystone) @ Andela bootcamp cycle 22...
-        </footer>
-    </div>
+        <p class="error"></p> 
     <script src='js/index.js'></script>
 </body>
 
