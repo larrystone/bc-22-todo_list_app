@@ -39,9 +39,9 @@ let loadData = () => {
     alert('no data');
   } else {
     let mylists = document.querySelector('.mylists');
-    mylists.innerHTML = '';
-    for (let i = 0; i < listCount; i++) {
-      let newlist = `<div class="list list${i}">
+
+    //create lists and append
+    let newlist = `<div class="list list${listCount}">
                     <input type="text" class="title" placeholder="Enter List title">
                     <div class="card card0">
                         <h2 class="cardtitle">+</h2>
@@ -50,8 +50,7 @@ let loadData = () => {
                         <h2 class="cardtitle">+</h2>
                     </div>
                 </div>`;
-      mylists.innerHTML = mylists.innerHTML + newlist;
-    }
+    mylists.innerHTML = mylists.innerHTML + newlist;
   } 
 };
 
