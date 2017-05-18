@@ -40,7 +40,7 @@ $(document).ready(() => {
     let removeItemButton = itemRemoveButtons[itemRemoveButtons.length - 1];
     $(removeItemButton).click(() => {
       $(removeItemButton).parent().closest('div').remove();
-    })
+    });
 
     let item = $(parent).find('.item-wrapper').toArray().pop();
     let itemCheckbox = $(item).find(`input[type =checkbox]`)[0];
